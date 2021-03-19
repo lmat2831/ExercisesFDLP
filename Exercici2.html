@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   </head>
+   <body>
+     <script>
+        
+        var numAlumnes = parseInt(prompt("Indiqui la quantitat d'alumnes "));
+        var contAlumnos = 0;
+        var alumnosBecados = [];
+
+     while(contAlumnos < numAlumnes) {
+         var nom = prompt("Nom del alumne ");
+         var edat = parseInt(prompt("Edat del alumne "));
+         var titol = confirm("Te estudis universitaris? ");
+         var atur = confirm("Està l'atur? ");
+
+      if(edat >= 18 && titol || edat >= 18 && atur) {
+           alumnosBecados.push(nom);
+      } else {
+           document.write( nom + " No obté la beca ");
+      }           
+     contAlumnos++; 
+    }
+ 
+   document.write(" Els alumnes becats son  " + alumnosBecados);
+
+      </script> 
+   </body>
+   </html>
