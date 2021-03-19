@@ -1,0 +1,35 @@
+<html>
+   <head>
+   </head>
+   
+   <body>
+       <script>
+           //variables que marcan la condicion del Loop.
+           var numeroBecas = 5; //variable con valor definido, es un tope de Loop
+           var contBecas = 0; //inicio de index, desde aqui comienzo a contar(verficar los elementos)
+           var alumnosBecados = []; //Array para la lista que se llenará con los nombres de 5 alumnos seleccionados
+
+           //la condicion primera es que la verificación se acabe cuando se llegue a cubrir las 5 becas.
+           while(contBecas < numeroBecas) {
+               //de la línea 15 a la 18 se recopilan los datos de los alumnos para ser verificados
+               var nom = prompt("Nom ");
+               var edat = parseInt(prompt("Edat ")); //conversión a numbers porque es edad (facilitar uso al usuario)
+               //uso de var booleans porque solo hay dos opciones: true or false. Uso del confirm para confirmar el valor "true"
+               var titol = confirm("tens titol universitari? ");
+               var atur = confirm("Estàs a l'atur? " );
+
+               /*nested loop "if": luego que tengo los datos recogidos los paso por el "if" si cumplen la condición el alumno
+                obtiene la beca y se pasa a verificar al segundo alumno*/ 
+                  if(edat >= 18 && titol || edat >= 18 && atur) {
+                         alumnosBecados.push(nom); //método para incluir un nuevo elemento a la list(Array)
+                     } else {
+                        document.write(" " + nom + " No obté la beca "); //si no cumple no tiene la beca, pasa al siguiente alumno
+                     }                    
+                     contBecas++; //incremento de uno en uno de los elementos por verificar (alumnos en este caso)
+                   }// aqui termina el loop para volverse a iniciar en el "while", a menos que haya completado las 5 plazas de becas.
+
+               document.write(" Els alumnes que han obtingut la beca són: " + alumnosBecados);//resultado final, fuera del Loop.
+                          
+       </script>
+   </body>
+</html>

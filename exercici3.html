@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var numEscondido = Math.round(Math.random() * 10); //perquè no poso el original?: Math.ceil(Math.random()*10)
+        var numUsuario = 0;
+        while (numUsuario != numEscondido) {
+            numUsuario = parseInt(prompt("Endevina el numero amagat. Tria un numero entre 1 i 10 ", ""));  //les cometes ("") buides calen sempre?
+            if (numUsuario != numEscondido) {
+                document.write(numUsuario + "<br> Ho sento :((  No has encertat. <br> Tria un numero més i que la sort t'acompanyi <br>"); 
+                //voldria que aquest print surta cada vegada que l'usuari tria un numero erroni
+            } else {
+                document.write("SII!! ");
+            }
+        }
+        document.write("Has endevinat! el numero es  " + numEscondido + "!");
+  
+    </script>
+</body>
+
+</html>

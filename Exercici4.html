@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    // Este es el mismo ejercicio anterior pero restringuido a 5 posibilidades
+
+     //este var numEscondido es el aleatorio. PREGUNTA: este valor incluye las 5 posibilidades como valor?
+     var numEscondido = Math.round(Math.random() * 5);
+     //contador de inicio y dato que ingresa el usurio
+     var numUsuari = 0;
+
+     //la condicion es que si el numero que pone el usuari es diferene al numero aleatorio
+     while(numUsuari != numEscondido) {
+       numUsuari = parseInt(prompt(" Endevina el numero amagat. Tria un numero entre 1 i 5 "));
+       //En este loop nested le he aumentado un "else if" porque hay 3 opciones
+       if(numUsuari != numEscondido) {
+         document.write(numUsuari + " <br> Ho sento :((  No has encertat. <br> Tria un numero més i que la sort t'acompanyi <br>");
+       } else if (numUsuari == numEscondido) {
+         document.write("Si! Por fin! ");
+       } else {
+         document.write("Has esgotats les oportunitats de la vida :(( El numero amaga era el " + numEscondido);
+       }
+    }
+    
+     document.write("Felicitats! " + numUsuari + " es aquest");
+    </script>
+  </body>
+</html>
